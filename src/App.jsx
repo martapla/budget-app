@@ -8,59 +8,88 @@ function App() {
 
   const [seoShowValue, setSeoShowValue] = useState(false);
   const [addsShowValue, setAddsShowValue] = useState(false);
+  const [webShowValue, setWebShowValue] = useState(false);
 
+  const [pagesPrice, setPagesPrice] = useState(0);
+  const [languagePrice, setLanguagePrice] = useState(0);
+
+ 
   const seoPrice = 300;
+  const addsPrice = 400;
+  const webPrice = 500;
 
+ 
   const handleSeoClick = () => {
     setSeoShowValue(!seoShowValue);
   };
 
-  const addsPrice = 400;
-
+  
   const handleAddsClick = () => {
     setAddsShowValue(!addsShowValue);
   };
+
+  const handleWebClick = () => {
+    setWebShowValue(!webShowValue);
+  };
+
+  const handleWebPriceUpdate = ({ pagesPrice, languagePrice }) => {
+    setPagesPrice(pagesPrice);
+    setLanguagePrice(languagePrice);
+  };
+
+    let totalPrice = 0;
+
   
+    if (seoShowValue) {
+      totalPrice += seoPrice;
+    }
 
-  let totalPrice = 0;
+    if (addsShowValue) {
+      totalPrice += addsPrice;
+    }
 
-  if (seoShowValue && addsShowValue) {
-    totalPrice = seoPrice + addsPrice;
+    if (webShowValue) {
+      totalPrice += webPrice + pagesPrice + languagePrice;
+    }
 
-  } else if (seoShowValue) {
-    totalPrice = seoPrice;
 
-  } else if (addsShowValue) {
-    totalPrice = addsPrice;
+    console.log('seoShowValue:', seoShowValue);
+    console.log('addsShowValue:', addsShowValue);
+    console.log('webShowValue:', webShowValue);
+    console.log('pagesPrice:', pagesPrice);
+    console.log('languagePrice:', languagePrice);
+    console.log('totalPrice:', totalPrice);
+  
+    return (
+      <>
+        <main>
+          <h1 className="p-8 uppercase text-2xl text-green-700 font-semibold">Build your website with us!</h1>
+
+          <CardSeo
+            onShowClick={handleSeoClick} />
+
+          <CardAdds
+            onShowClick={handleAddsClick} />
+
+          <CardWeb
+            onShowClick={handleWebClick}
+            updatePrices={handleWebPriceUpdate}
+          />
+          
+        
+          {(seoShowValue || addsShowValue || webShowValue) && (
+
+            <div className="p-8">
+              <p className="text-lg font-semibold text-green-700">Preu Total: {totalPrice} €</p>
+          
+            </div>
+          )}
+        </main>
+
+
+      </>
+    )
   }
 
- 
-  return (
-    <>
-      <main>
-        <h1 className="p-8 uppercase text-2xl text-green-700 font-semibold">Build your website with us!</h1>
 
-        <CardSeo
-          showValue={seoShowValue}
-          onShowClick={handleSeoClick} />
-
-        <CardAdds
-        showValue={addsShowValue}
-        onShowClick={handleAddsClick}/>
-
-        <CardWeb />
-        
-      
-      </main>
-
-      {(seoShowValue || addsShowValue) && (
-        <div className="p-8">
-           <p className="text-lg font-semibold text-green-800">Preu Total: {totalPrice} €</p>
-        </div>
-      )}
-      
-    </>
-  )
-}
-
-export default App
+  export default App;

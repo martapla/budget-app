@@ -52,13 +52,6 @@ function App() {
       totalPrice += webPrice + pagesPrice + languagePrice;
     }
 
-
-    console.log('seoShowValue:', seoShowValue);
-    console.log('addsShowValue:', addsShowValue);
-    console.log('webShowValue:', webShowValue);
-    console.log('pagesPrice:', pagesPrice);
-    console.log('languagePrice:', languagePrice);
-    console.log('totalPrice:', totalPrice);
   
     return (
       <>

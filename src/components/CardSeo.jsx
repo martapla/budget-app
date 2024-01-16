@@ -12,11 +12,11 @@ const CardSeo = ({ onShowClick }) => {
 
 
   return (
-    <div className="w-90 mx-auto bg-white rounded-xl shadow-xl overflow-hidden  m-5 flex align-baseline justify-around">
+    <div className="w-90 mx-auto bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden  m-5 flex align-baseline justify-around">
           
           <div className="p-8 ">
-            <div className="uppercase tracking-wide text-sm text-500 font-semibold">Seo</div>
-            <p className=" mt-1 text-md leading-tight ">Programming responsive website</p>
+            <div className="uppercase tracking-wide text-lg text-500 font-bold">Seo</div>
+            <p className=" mt-1 text-md font-mono">Programming responsive website</p>
           </div>
     
           <div className="p-8 flex items-center">
@@ -25,7 +25,7 @@ const CardSeo = ({ onShowClick }) => {
 
           <div className="p-8 flex items-center">
             <input type="checkbox" onClick={addClick}className="form-checkbox text-blue-500 h-5 w-5"/>
-            <label htmlFor="checkbox" className="ml-2">Add</label>
+            <label htmlFor="checkbox" className="ml-2 ">Add</label>
           </div>
 
     </div>

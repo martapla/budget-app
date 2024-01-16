@@ -62,7 +62,7 @@ function App() {
            </Link>
         </header>
         <main>
-          <h1 className="p-8 uppercase text-2xl text-green-700 font-semibold">Build your website with us!</h1>
+          <h1 className="p-8 text-blue-600 text-2xl font-bold">Calculate your Budget Now</h1>
 
           <CardSeo
             onShowClick={handleSeoClick} />
@@ -79,7 +79,7 @@ function App() {
           {(seoShowValue || addsShowValue || webShowValue) && (
 
             <div className="p-8">
-              <p className="text-lg font-semibold text-green-700">Preu Total: {totalPrice} €</p>
+              <p className="text-[#3498db] text-xl font-bold">Total Price: {totalPrice} €</p>
           
             </div>
           )}

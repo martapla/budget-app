@@ -95,7 +95,9 @@ return (
             </label>
             
             <button className="bg-yellow-400 text-white px-2 rounded-md mr-2"
-                    onClick={() => handleNumPagesChange(1)}>+</button>
+             onClick={() => handleNumPagesChange(page=>page+1)}>+</button>
+           
+
 
             <input
               type="text"

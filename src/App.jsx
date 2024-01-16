@@ -3,6 +3,7 @@ import CardAdds from './components/CardAdds'
 import CardSeo from './components/CardSeo'
 import CardWeb from './components/CardWeb'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function App() {
 
@@ -55,6 +56,11 @@ function App() {
   
     return (
       <>
+        <header>
+           <Link to={"/"}>
+               <button type="button">Go Back</button>
+           </Link>
+        </header>
         <main>
           <h1 className="p-8 uppercase text-2xl text-green-700 font-semibold">Build your website with us!</h1>
 

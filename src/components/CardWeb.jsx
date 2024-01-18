@@ -89,18 +89,18 @@ return (
          
          {/* Pages Input */}
           <div className=" p-6 flex flex-row items-center ">
-            <label htmlFor="numPages"
-                   className="text-xs font-medium text-gray-700 mr-3">
-                   Num of Pages
-            </label>
-            
+
+            <label className="text-xs font-medium text-gray-700 mr-3">
+              Num of Pages
+              <span className="p-1 cursor-pointer">ℹ</span>
+            </label> 
+                 
             <button className="bg-yellow-400 text-white px-2 rounded-md mr-2"
-             onClick={() => handleNumPagesChange(page=>page+1)}>+</button>
+             onClick={() => handleNumPagesChange(+1)}>+</button>
            
-
-
             <input
               type="text"
+              readOnly
               id="numPages"
               value={numPages}
               min={0}
@@ -116,21 +116,24 @@ return (
 
           {/* Languages Input */}
           <div className=" p-6 flex flex-row items-center ">
-            <label htmlFor="numLanguages"
-                   className="block text-xs font-medium text-gray-700 mr-3">
-                   Num of Languages
+
+            <label className="block text-xs font-medium text-gray-700 mr-3">
+              Num of Languages
+                <span className="p-1 cursor-pointer">ℹ</span>
             </label>
 
             <button className="bg-yellow-400 text-white px-2 rounded-md mr-2"
                     onClick={() => handleNumLanguagesChange(1)}>+</button>
             <input
               type="text"
+              readOnly
               id="numLanguages"
               value={numLanguages}
               min={0}
               onChange={(e) => handleNumLanguagesChange(Number(e.target.value))}
-              className=" p-2 border border-gray-300 rounded-md w-10"
+              className=" p-2 border border-gray-300 rounded-md w-10 text-right"
             />
+
             <button className="bg-yellow-400 text-white px-2 rounded-md ml-2"
                     onClick={() => handleNumLanguagesChange(-1)}>-</button>
           </div>

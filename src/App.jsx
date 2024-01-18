@@ -56,9 +56,9 @@ function App() {
   
     return (
       <>
-        <header>
+        <header className='flex flex-start text-blue-500 font-semibold ml-6'>
            <Link to={"/"}>
-               <button type="button">Go Back</button>
+               <button type="button"> ≺ Go Back</button>
            </Link>
         </header>
         <main>

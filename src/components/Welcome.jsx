@@ -21,7 +21,7 @@ const Welcome = () => {
             </div>
 
             <Link to={"/home"}>
-                <button className="mt-10 p-2 border-2 border-yellow-300 text-blue-400 bg-yellow rounded-md font-mono"
+                <button className="mt-10 p-2 border-2 border-yellow-300 text-blue-400 bg-yellow rounded-md font-mono custom-box-shadow custom-box-shadow:hover"
                         type="button">Let's Start</button>
            </Link>
         

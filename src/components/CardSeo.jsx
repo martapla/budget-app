@@ -12,20 +12,22 @@ const CardSeo = ({ onShowClick }) => {
 
 
   return (
-    <div className="w-90 mx-auto bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden  m-5 flex align-baseline justify-around">
+    <div className="w-full bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around">
           
-          <div className="p-8 ">
-            <div className="uppercase tracking-wide text-lg text-500 font-bold">Seo</div>
-            <p className=" mt-1 text-md font-mono">Programming responsive website</p>
-          </div>
+      <div className="p-4 md:p-8">
+        
+         <div className="uppercase tracking-wide md:ml-2 text-md md:text-xl text-blue-700 font-bold text-start">Seo</div>
+        
+         <p className="mt-1 md:ml-2 text-sm md:text-md font-mono text-start">Visibility with strategic content.</p>
+      </div>
     
-          <div className="p-8 flex items-center">
-            <p className="font-medium text-black">300€</p>
+          <div className="p-3 md:p-4 md:p-8 flex items-center">
+            <p className="text-blue-600 font-bold md:text-lg ">300€</p>
           </div>     
 
-          <div className="p-8 flex items-center">
-            <input type="checkbox" onClick={addClick}className="form-checkbox text-blue-500 h-5 w-5"/>
-            <label htmlFor="checkbox" className="ml-2 ">Add</label>
+          <div className="p-4 md:p-8 flex items-center">
+            <input type="checkbox" onClick={addClick} className="form-checkbox text-blue-500 h-5 w-5"/>
+            <label htmlFor="checkbox" className="ml-1 md:ml-2">Add</label>
           </div>
 
     </div>

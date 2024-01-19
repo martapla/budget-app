@@ -1,4 +1,3 @@
-import './App.css'
 import CardAdds from './components/CardAdds'
 import CardSeo from './components/CardSeo'
 import CardWeb from './components/CardWeb'
@@ -56,13 +55,13 @@ function App() {
   
     return (
       <>
-        <header className='flex flex-start text-blue-500 font-semibold ml-6'>
+        <header className='flex flex-start text-blue-500 font-semibold md:ml-6'>
            <Link to={"/"}>
                <button type="button"> ≺ Go Back</button>
            </Link>
         </header>
         <main>
-          <h1 className="p-8 text-blue-600 text-2xl font-bold">Calculate your Budget Now</h1>
+          <h1 className="p-6 md:p-8 text-blue-600 text-2xl font-bold">Calculate your Budget </h1>
 
           <CardSeo
             onShowClick={handleSeoClick} />
@@ -83,6 +82,8 @@ function App() {
           
             </div>
           )}
+
+
         </main>
 
 

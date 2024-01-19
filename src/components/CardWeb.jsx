@@ -8,6 +8,7 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
   const [webShowPanel, setWebShowPanel] = useState(false);
   const [numPages, setNumPages] = useState(0);
   const [numLanguages, setNumLanguages] = useState(0);
+  const [showModal, setShowModal] = useState(false);
   
   const webPrice = 500;
  
@@ -53,46 +54,50 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
   //     updatePrices({ pagesPrice: newPagesPrice, languagePrice: newLanguagePrice });
   //   }
   
-
+  function displayModal() {
+  setShowModal(!showModal)
+}
 
 return (
   
     <>
-    <div className="w-90 mx-auto  bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden m-5 flex flex-column align-baseline justify-around items-center flex-wrap">
+      <div className="w-full bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden mt-5 flex align-baseline justify-around flex flex-column flex-wrap ">
 
-      <div className='w-full flex items-center justify-around flex-wrap'>
+        <div className="w-full md:w-full items-center flex md:flex-row justify-around">
         
-          <div className="p-8 ">
-              <div className="uppercase tracking-wide text-lg text-500 font-bold">Web</div>
-              <p className=" mt-1 text-md font-mono">Programming responsive website</p>
-          </div>
-    
-          <div className="p-8 flex">
-              <p className="font-medium text-black"> {webShowPanel
-              ? `${500}€ + ${numPages * 30}€ per page + ${numLanguages * 30}€ per language = ${
-                500 + numPages * 30 + numLanguages * 30 }€`
-              : '500€'}
-              </p>
-          </div>
+            <div className="md:block p-4 md:p-8 ">
+
+                <div className="uppercase tracking-wide text-md md:text-xl text-blue-700 font-bold text-start">Web</div>
+            
+                  <p className=" mt-1 text-sm md:text-md font-mono text-start">Programming responsive websites.</p>
+            </div> 
       
-          <div className="p-8 flex ">
-              <input onClick={addClick} type="checkbox" className="form-checkbox text-blue-500 h-5 w-5" />
-              <label htmlFor="checkbox" className="ml-2">
-                Add 
-              </label>
-          </div>
+            <div className="p-3 md:p-4 md:p-8 md:ml-5 flex items-center">
+              <p className="text-blue-600 font-bold md:text-lg ">500€</p>
+            </div>     
           
-      </div>
+
+            <div className="p-4 md:p-8 flex items-center">
+                <input onClick={addClick} type="checkbox" className="form-checkbox text-blue-500 h-5 w-5" />
+                <label htmlFor="checkbox" className="ml-1">
+                  Add 
+                </label>
+            </div>
+          
+        </div>
      
       {webShowPanel && (
-        <div className="flex flex-column flex-wrap items-center justify-end mr-14">
-         
+       
+      <div className='flex-column items-center justify-center border border-2 border-white shadow-xl rounded-md mb-6 mx-6'> 
+          
          {/* Pages Input */}
-          <div className=" p-6 flex flex-row items-center ">
+          <div className="p-6 flex flex-row items-center justify-end">
 
             <label className="text-xs font-medium text-gray-700 mr-3">
-              Num of Pages
-              <span className="p-1 cursor-pointer">ℹ</span>
+              Number of Pages
+              <span className="p-1 cursor-pointer">ℹ
+              
+              </span>
             </label> 
                  
             <button className="bg-yellow-400 text-white px-2 rounded-md mr-2"
@@ -105,7 +110,7 @@ return (
               value={numPages}
               min={0}
               onChange={(e) => handleNumPagesChange(Number(e.target.value))}
-              className=" p-2 border border-gray-300 rounded-md w-10"
+              className=" p-2 border border-gray-300 rounded-md w-10 text-center"
             />
 
             <button className="bg-yellow-400 text-white px-2 rounded-md ml-2"
@@ -115,10 +120,10 @@ return (
             
 
           {/* Languages Input */}
-          <div className=" p-6 flex flex-row items-center ">
+          <div className=" p-6 flex flex-row items-center">
 
             <label className="block text-xs font-medium text-gray-700 mr-3">
-              Num of Languages
+              Number of Languages
                 <span className="p-1 cursor-pointer">ℹ</span>
             </label>
 
@@ -131,7 +136,7 @@ return (
               value={numLanguages}
               min={0}
               onChange={(e) => handleNumLanguagesChange(Number(e.target.value))}
-              className=" p-2 border border-gray-300 rounded-md w-10 text-right"
+              className=" p-2 border border-gray-300 rounded-md w-10 text-center"
             />
 
             <button className="bg-yellow-400 text-white px-2 rounded-md ml-2"

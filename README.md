@@ -54,13 +54,13 @@ Display the help message using Bootstrap modals, with the button featuring an in
 
 <br/>
 
-###  💾 React + Vite
+#  💾 React + Vite
 
 The project has been developed with Vite due to its speed and efficiency for small projects. 
 
 <br/>
 
-###  🎠 Style
+#  🎠 Style
 
 The UI is design by me and I used Tailwind Css. 
 The project is also fully responsive, for mobile, tablet and desktop.

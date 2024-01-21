@@ -1,6 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import {React, useState } from 'react';
+import { React, useState } from 'react';
+import ModalPages from './ModalPages';
+import ModalLanguages from './ModalLanguages';
 
 
 const CardWeb = ({ onShowClick, updatePrices }) => {
@@ -8,8 +10,11 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
   const [webShowPanel, setWebShowPanel] = useState(false);
   const [numPages, setNumPages] = useState(0);
   const [numLanguages, setNumLanguages] = useState(0);
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
+  const [showModalPage, setShowModalPage] = useState(false);
+  const [showModalLanguages, setShowModalLanguages] = useState(false);
   
+
   const webPrice = 500;
  
 
@@ -54,14 +59,25 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
   //     updatePrices({ pagesPrice: newPagesPrice, languagePrice: newLanguagePrice });
   //   }
   
-function displayModal() {
-  setShowModal(!showModal);
+  function displayModalPage() {
+    setShowModalPage(true);
   }
   
-  function closeModal() {
-  if (showModal)
-  setShowModal(false);
+  function closeModalPage() {
+    setShowModalPage(false);
   }
+  
+  function displayModalLanguages() {
+    console.log("Show Modal Languages");
+    setShowModalLanguages(true);
+  }
+  
+  function closeModalLanguages() {
+    console.log("Close Modal Languages");
+
+    setShowModalLanguages(false);
+  }
+  
 
 return (
   
@@ -84,85 +100,78 @@ return (
 
             <div className="p-4 md:p-8 flex items-center">
                 <input onClick={addClick} type="checkbox" className="form-checkbox text-blue-500 h-5 w-5" />
-                <label htmlFor="checkbox" className="ml-1">
+                <label htmlFor="checkbox" className="ml-1 md:ml-2">
                   Add 
                 </label>
             </div>
           
         </div>
      
-      {webShowPanel && (
-       
-      <div className='flex-column items-center justify-center border border-2 border-white shadow-xl rounded-md mb-6 mx-6'> 
+        {webShowPanel && (
+        
+        <div className='flex-column items-center justify-center border border-2 border-white shadow-xl rounded-md mb-6 mx-6'> 
           
-         {/* Pages Input */}
-          <div className="p-6 flex flex-row items-center justify-end">
+          {/* Pages Input */}
+            <div className="p-6 flex flex-row items-center justify-end">
 
-            <label className="text-xs font-medium text-gray-700 mr-3">
-              Number of Pages
-              <span onClick={() => displayModal()}
-                    className="p-1 cursor-pointer">ℹ
-              </span>
-            </label> 
-                 
-            <button className="bg-yellow-400 text-white px-2 rounded-md mr-2"
-             onClick={() => handleNumPagesChange(+1)}>+</button>
-           
-            <input
-              type="text"
-              readOnly
-              id="numPages"
-              value={numPages}
-              min={0}
-              onChange={(e) => handleNumPagesChange(Number(e.target.value))}
-              className=" p-2 border border-gray-300 rounded-md w-10 text-center"
-            />
-
-            <button className="bg-yellow-400 text-white px-2 rounded-md ml-2"
-              onClick={() => handleNumPagesChange(-1)}>-</button>
+              <label className="text-xs font-medium text-gray-700 mr-3">
+                Number of Pages
+                <span onClick={() => displayModalPage()}
+                      className="p-1 cursor-pointer">ℹ
+                </span>
+              </label> 
+                  
+              <button className="bg-yellow-400 text-white px-2 rounded-md mr-2"
+              onClick={() => handleNumPagesChange(+1)}>+</button>
             
-          </div>
-            
+              <input
+                type="text"
+                readOnly
+                id="numPages"
+                value={numPages}
+                min={0}
+                onChange={(e) => handleNumPagesChange(Number(e.target.value))}
+                className=" p-2 border border-gray-300 rounded-md w-10 text-center"
+              />
 
-          {/* Languages Input */}
-          <div className=" p-6 flex flex-row items-center">
-
-            <label className="block text-xs font-medium text-gray-700 mr-3">
-              Number of Languages
-                <span className="p-1 cursor-pointer">ℹ</span>
-            </label>
-
-            <button className="bg-yellow-400 text-white px-2 rounded-md mr-2"
-                    onClick={() => handleNumLanguagesChange(1)}>+</button>
-            <input
-              type="text"
-              readOnly
-              id="numLanguages"
-              value={numLanguages}
-              min={0}
-              onChange={(e) => handleNumLanguagesChange(Number(e.target.value))}
-              className=" p-2 border border-gray-300 rounded-md w-10 text-center"
-            />
-
-            <button className="bg-yellow-400 text-white px-2 rounded-md ml-2"
-                    onClick={() => handleNumLanguagesChange(-1)}>-</button>
-          </div>
-        </div>
-      )}
-
-      {showModal && (
-        <div className='bg-gray-400 bg-opacity-75 z-50 absolute top-0 h-full w-full flex items-center justify-center' onClick={closeModal}>
-            <div className='m-4 p-6 bg-gray-100 border-2 rounded-lg border-blue-300' onClick={closeModal}>
-              <h2 className='py-4 text-blue-600 font-bold'> Number of pages</h2>
-              <p className='text-blue-600'> Add quantity of pages you need.</p>
-              <p className='text-blue-600'>  Each page has a cost of <span className='text-blue-600 font-bold'>30€</span> </p>
-          
-            </div>
-        </div>
-       
-       )}
+              <button className="bg-yellow-400 text-white px-2 rounded-md ml-2"
+                onClick={() => handleNumPagesChange(-1)}>-</button>
               
-    </div>
+            </div>
+              
+
+            {/* Languages Input */}
+            <div className=" p-6 flex flex-row items-center">
+
+              <label className="block text-xs font-medium text-gray-700 mr-3">
+                Number of Languages
+                <span className="p-1 cursor-pointer"
+                onClick={() => displayModalLanguages()}>ℹ</span>
+              </label>
+
+              <button className="bg-yellow-400 text-white px-2 rounded-md mr-2"
+                      onClick={() => handleNumLanguagesChange(1)}>+</button>
+              <input
+                type="text"
+                readOnly
+                id="numLanguages"
+                value={numLanguages}
+                min={0}
+                onChange={(e) => handleNumLanguagesChange(Number(e.target.value))}
+                className=" p-2 border border-gray-300 rounded-md w-10 text-center"
+              />
+
+              <button className="bg-yellow-400 text-white px-2 rounded-md ml-2"
+                      onClick={() => handleNumLanguagesChange(-1)}>-</button>
+            </div>
+          </div>
+        )}
+
+        <ModalPages showModal={showModalPage} closeModal={closeModalPage} />
+
+        <ModalLanguages showModal={showModalLanguages} closeModal={closeModalLanguages} />
+
+      </div>
     </>
   );
 };

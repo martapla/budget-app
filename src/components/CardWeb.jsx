@@ -82,7 +82,7 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
 return (
   
     <>
-      <div className="w-full bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden mt-5 flex align-baseline justify-around flex flex-column flex-wrap ">
+      <div className="w-full bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden  mt-3 md:mt-5 flex align-baseline justify-around flex flex-column flex-wrap ">
 
         <div className="w-full md:w-full items-center flex md:flex-row justify-around">
         

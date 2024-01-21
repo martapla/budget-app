@@ -5,7 +5,7 @@ We will develop an application with the aim of streamlining calculations for the
 
 Our website will have to respond and adjust the total price based on the options selected by the user.
 
-![image exercise](<src/assets/exercise example.png>)
+![image example](<src/assets/exercise example.png>)
 
 ## Exercise 1
 

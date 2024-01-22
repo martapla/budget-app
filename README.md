@@ -3,7 +3,7 @@
 ## 🌐 Live Demo
 https://budget-app-react-omega.vercel.app/
 
-# Project Instructions - React mid-level. 
+## 👩‍🔧 Project Instructions - React mid-level. 
 We will develop an application with the aim of streamlining calculations for the budget of a website, enhancing interaction with the user compared to the previous practice, through the use of checkboxes, input fields, and buttons.
 
 Our website will have to respond and adjust the total price based on the options selected by the user.

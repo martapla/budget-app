@@ -10,17 +10,13 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
   const [webShowPanel, setWebShowPanel] = useState(false);
   const [numPages, setNumPages] = useState(0);
   const [numLanguages, setNumLanguages] = useState(0);
-  // const [showModal, setShowModal] = useState(false);
   const [showModalPage, setShowModalPage] = useState(false);
   const [showModalLanguages, setShowModalLanguages] = useState(false);
   
 
-  const webPrice = 500;
- 
-
   const addClick = () => {
+
     onShowClick();
-   
     setWebShowPanel(!webShowPanel);
   };
 
@@ -56,8 +52,11 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
 
   //     const newPagesPrice = numPages * 30;
   //     const newLanguagePrice = numLanguages * 30;
-  //     updatePrices({ pagesPrice: newPagesPrice, languagePrice: newLanguagePrice });
+  //     updatePrices({ pagesPrice: newPagesPrice,
+  //     languagePrice: newLanguagePrice });
   //   }
+  
+
   
   function displayModalPage() {
     setShowModalPage(true);
@@ -68,13 +67,10 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
   }
   
   function displayModalLanguages() {
-    console.log("Show Modal Languages");
     setShowModalLanguages(true);
   }
   
   function closeModalLanguages() {
-    console.log("Close Modal Languages");
-
     setShowModalLanguages(false);
   }
   

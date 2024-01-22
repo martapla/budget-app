@@ -12,7 +12,7 @@ const CardSeo = ({ onShowClick }) => {
 
 
   return (
-    <div className="w-full bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around">
+    <div className="w-full md:w-5/6 mx-auto bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around ">
           
       <div className="p-4 md:p-8">
         

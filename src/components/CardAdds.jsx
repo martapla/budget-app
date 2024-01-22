@@ -8,7 +8,7 @@ const CardAdds = ({onShowClick}) => {
         onShowClick();
     }
   return (
-    <div className="w-full bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around mt-3 md:mt-5">
+    <div className="w-full md:w-5/6 mx-auto bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around mt-3 md:mt-5">
           
       <div className="p-4 md:p-8">
         

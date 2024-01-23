@@ -3,6 +3,7 @@ import CardSeo from './components/CardSeo'
 import CardWeb from './components/CardWeb'
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import FormContact from './components/FormContact';
 
 function App() {
 
@@ -86,7 +87,7 @@ function App() {
 
         </main>
 
-
+        <FormContact />
       </>
     )
   }

@@ -53,7 +53,7 @@ By clicking a button, the Home component with the budget calculator will be disp
 
 To ensure that everyone understands the meaning of the input fields for the number of pages and languages, you will need to implement a button that opens a help popup.
 
-Display the help message using Bootstrap modals, with the button featuring an information icon.
+Display the help message with the button featuring an information icon.
 
 <br/>
 

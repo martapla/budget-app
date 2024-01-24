@@ -8,11 +8,11 @@ const CardAdds = ({onShowClick}) => {
         onShowClick();
     }
   return (
-    <div className="w-full md:w-5/6 mx-auto bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around mt-3 md:mt-5">
+    <div className="w-full md:w-5/6 mx-auto bg-blue-50 border border-2 border-blue-300 rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around mt-3 md:mt-5">
           
       <div className="p-4 md:p-8">
         
-        <div className="uppercase tracking-wide md:ml-2 text-md md:text-xl text-blue-700 font-bold text-start">Ads</div>
+        <div className="uppercase tracking-wide md:ml-2 text-md md:text-xl text-blue-500 font-bold text-start">Ads</div>
         
         <p className="mt-1 md:ml-2 text-sm md:text-md font-mono text-start">Strategic advertising research.</p>
       </div>

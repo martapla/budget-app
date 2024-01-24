@@ -78,13 +78,13 @@ const CardWeb = ({ onShowClick, updatePrices }) => {
 return (
   
     <>
-      <div className="w-full md:w-5/6 mx-auto bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden  mt-3 md:mt-5 flex align-baseline justify-around flex flex-column flex-wrap ">
+      <div className="w-full md:w-5/6 mx-auto bg-blue-50 border border-2 border-blue-300  rounded-xl shadow-xl overflow-hidden  mt-3 md:mt-5 flex align-baseline justify-around flex flex-column flex-wrap ">
 
         <div className="w-full md:w-full items-center flex md:flex-row justify-around">
         
             <div className="md:block p-4 md:p-8 ">
 
-                <div className="uppercase tracking-wide text-md md:text-xl text-blue-700 font-bold text-start">Web</div>
+                <div className="uppercase tracking-wide text-md md:text-xl text-blue-500 font-bold text-start">Web</div>
             
                   <p className=" mt-1 text-sm md:text-md font-mono text-start">Programming responsive websites.</p>
             </div> 

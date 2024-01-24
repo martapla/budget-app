@@ -13,7 +13,6 @@ function App() {
 
   const [pagesPrice, setPagesPrice] = useState(0);
   const [languagePrice, setLanguagePrice] = useState(0);
-
  
   const seoPrice = 300;
   const addsPrice = 400;
@@ -56,13 +55,13 @@ function App() {
   
     return (
       <>
-        <header className='flex flex-start text-blue-500 font-semibold md:ml-6'>
+        <header className='flex justify-start text-blue-500 text-sm md:text-md font-semibold md:ml-6'>
            <Link to={"/"}>
                <button type="button"> ≺ Go Back</button>
            </Link>
         </header>
         <main>
-          <h1 className="p-6 md:p-8 text-blue-600 text-2xl font-bold">Calculate your Budget </h1>
+          <h1 className="p-4 md:p-0 md:pb-8 text-blue-600 text-xl md:text-2xl font-semibold">Calculate your Budget </h1>
 
           <CardSeo
             onShowClick={handleSeoClick} />
@@ -78,8 +77,8 @@ function App() {
         
           {(seoShowValue || addsShowValue || webShowValue) && (
 
-            <div className="p-8">
-              <p className="text-[#3498db] text-xl font-bold">Total Price: {totalPrice} €</p>
+            <div className="pt-4 pr-3 md:pr-20 lg:pr-28 xl:mr-8 flex justify-end">
+              <p className="text-blue-500 md:text-lg font-semibold">Total Price: {totalPrice} €</p>
           
             </div>
           )}
@@ -87,7 +86,10 @@ function App() {
 
         </main>
 
-        <FormContact />
+        <FormContact
+          seoShowValue={seoShowValue} addsShowValue={addsShowValue} webShowValue={webShowValue}
+          totalPrice={totalPrice}
+         />
       </>
     )
   }

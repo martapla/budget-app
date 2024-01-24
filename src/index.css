@@ -9,6 +9,7 @@ body {
   min-width: 350px;
   min-height: 100vh;
   background-color: rgb(223, 249, 241);
+  background: linear-gradient(to bottom, rgb(210, 243, 231),rgb(204, 242, 238), rgb(186, 216, 239));
   text-align: center;
 }
 
@@ -22,4 +23,9 @@ body {
   color:#f6d23f;
   border: 2px solid #60A5FA;
   background-color: white;
+  
+}
+
+input-internal-autofill-selected {
+  background-color: white !important;
 }

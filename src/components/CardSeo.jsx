@@ -12,11 +12,11 @@ const CardSeo = ({ onShowClick }) => {
 
 
   return (
-    <div className="w-full md:w-5/6 mx-auto bg-blue-50 border border-1 border-[#3498db] rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around ">
+    <div className="w-full md:w-5/6 mx-auto bg-blue-50 border border-2 border-blue-300  rounded-xl shadow-xl overflow-hidden flex align-baseline justify-around ">
           
       <div className="p-4 md:p-8">
         
-         <div className="uppercase tracking-wide md:ml-2 text-md md:text-xl text-blue-700 font-bold text-start">Seo</div>
+         <div className="uppercase tracking-wide md:ml-2 text-md md:text-xl text-blue-500 font-bold text-start">Seo</div>
         
          <p className="mt-1 md:ml-2 text-sm md:text-md font-mono text-start">Visibility with strategic content.</p>
       </div>

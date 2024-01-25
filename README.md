@@ -8,7 +8,7 @@ We will develop an application with the aim of streamlining calculations for the
 
 Our website will have to respond and adjust the total price based on the options selected by the user.
 
-![example image](src/assets/example.png)
+![example exercise](<src/assets/ex. example.png>)
 
 ## 📍 Exercise 1
 
@@ -68,5 +68,6 @@ The project has been developed with Vite due to its speed and efficiency for sma
 The UI is design by me and I used Tailwind Css. 
 The project is also fully responsive, for mobile, tablet and desktop.
 
-![welcome](src/assets/welcome.png)  ![home](src/assets/home.png)
 
+
+![vercel image](<src/assets/vercel image.png>)
